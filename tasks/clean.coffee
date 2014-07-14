@@ -1,5 +1,4 @@
 module.exports = (gulp, cfg, env) ->
-  rimraf = require 'gulp-rimraf'
   del = require 'del'
 
   gulp.task 'clean', (cb) ->
