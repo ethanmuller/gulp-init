@@ -27,6 +27,7 @@ gulp.task "build", (callback) ->
     'assets'
     [
       'scripts'
+      'styles'
       'bower-files'
     ]
     callback
