@@ -24,7 +24,7 @@ For a one-off build:
 gulp build
 ```
 
-The rest of the tasks live in `tasks/`.
+The rest of the tasks live in `tasks/`. You can run them with `gulp filename`, like `gulp coffee`.
 
 **All your stuff will go into `build/`.**
 
