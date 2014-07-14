@@ -1,5 +1,7 @@
 #gulp-init
 
+Very basic Gulp starter project. Coffee, SCSS, and a server with live reload.
+
 ## Requirements
 
 - Gulp (`npm install -g gulp`)
