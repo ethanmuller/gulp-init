@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "grunt-init",
   "version": "0.1.0",
   "ignore": [
     "**/.*",
