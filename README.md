@@ -1,5 +1,10 @@
 #gulp-init
 
+## Requirements
+
+- Gulp (`npm install -g gulp`)
+- Probably other stuff that I can't think of.
+
 ## Setup
 
 - `npm install`
@@ -19,7 +24,9 @@ For a one-off build:
 gulp build
 ```
 
-All your stuff will go into `build/`.
+The rest of the tasks live in `tasks/`.
+
+**All your stuff will go into `build/`.**
 
 ## Directories
 
