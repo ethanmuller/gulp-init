@@ -11,4 +11,5 @@ module.exports = (gulp, cfg, env) ->
     gulp.src(cfg.paths.scriptsIn + '**/*.coffee')
       .pipe(coffee())
       .pipe(concat("all.js"))
+      .pipe(gulpif((env is 'production'), uglify()))
       .pipe(gulp.dest(cfg.paths.scriptsOut))
