@@ -15,10 +15,13 @@ env = process.env.NODE_ENV or "development"
 _.each tasks, (task) ->
   task(gulp, config, env)
 
-# "default" and "build" will be your most commonly-run tasks from the CLI.
-# All the more granular tasks are in "tasks/"
+# The "default" and "build" tasks will be your most commonly-used tasks from
+# the CLI.  The more granular tasks are in "tasks/"
 
 gulp.task "build", (callback) ->
+  # runSequence is a gulp plugin that is a little bit of a hack.  It lets us
+  # define synchronous tasks without requiring that task to be a dependency. 
+  # To add more async tasks, add them to the array.
   runSequence(
     'clean'
     'assets'
