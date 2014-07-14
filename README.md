@@ -28,12 +28,13 @@ The rest of the tasks live in `tasks/`.
 
 **All your stuff will go into `build/`.**
 
-## Directories
+## Important Directories/Files
 
 ```
-src/              - Stuff in this directory gets moved or processed
-build/            - This directory is generated after processing everything. This directory is disposable and should not be checked in
+gulpfile.coffee   - Gulp configuration
+config.coffee     - Object that is passed to all tasks. Contains common things like file paths.
+src/              - Stuff in this directory gets moved or processed, like SCSS or CoffeeScript
 tasks/            - Gulp tasks are defined in here
-node_modules/     - npm packages
-bower_components/ - bower packages
+
+build/            - Processed files go here. You could zip this up and deploy it.
 ```
