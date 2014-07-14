@@ -5,7 +5,7 @@ module.exports =
     assets: 'src/assets/'
 
     scriptsIn: 'src/coffee/'
-    vendorIn: 'src/vendor/'
+    vendorInGlob: ['src/vendor/**/*', 'bower_components/**/*']
 
     scriptsOut: 'build/js/'
     stylesOut: 'build/css/'

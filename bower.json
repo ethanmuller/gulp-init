@@ -9,7 +9,6 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {}
 }
