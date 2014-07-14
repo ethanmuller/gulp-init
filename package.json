@@ -23,5 +23,8 @@
     "lodash": "^2.4.1",
     "del": "^0.1.1",
     "run-sequence": "^0.3.6"
+  },
+  "dependencies": {
+    "gulp-sass": "^0.7.2"
   }
 }
