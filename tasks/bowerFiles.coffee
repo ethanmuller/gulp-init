@@ -6,9 +6,10 @@ module.exports = (gulp, cfg, env) ->
 
   gulp.task 'bower-files', ['clean-vendor'], ->
     try
-      gulp.src(bowerFiles())
-        .pipe(concat('vendor.js'))
+      gulp.src(
+          bowerFiles()
+          .concat(cfg.paths.vendorInGlob)
+        ).pipe(concat('vendor.js'))
         .pipe(gulpif(env is 'production', uglify()))
         .pipe gulp.dest(cfg.paths.vendorOut)
-    catch error
-      console.log error.message
+    # if this fails, there were probably no vendor files to pick up
