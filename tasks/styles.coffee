@@ -4,8 +4,10 @@ module.exports = (gulp, cfg, env) ->
   errorHandler = require '../error-handler'
 
   gulp.task "styles", ['clean-styles'], ->
-    gulp.src(cfg.paths.stylesIn + '**/*.scss')
-      .pipe sass()
-      .on('error', errorHandler.error)
+    stream = gulp.src(cfg.paths.stylesIn + '**/*.scss')
+      .pipe(sass().on 'error', (e) ->
+        errorHandler.error(e)
+        stream.end()
+      )
       .pipe(gulp.dest(cfg.paths.stylesOut))
       .pipe(connect.reload())
