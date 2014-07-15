@@ -22,10 +22,10 @@
     "coffee-script": "^1.7.1",
     "lodash": "^2.4.1",
     "del": "^0.1.1",
-    "run-sequence": "^0.3.6"
+    "run-sequence": "^0.3.6",
+    "gulp-util": "^2.2.20",
+    "gulp-connect": "^2.0.6",
+    "gulp-sass": "^0.7.2"
   },
-  "dependencies": {
-    "gulp-sass": "^0.7.2",
-    "gulp-connect": "^2.0.6"
-  }
+  "dependencies": {}
 }
