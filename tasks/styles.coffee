@@ -1,7 +1,9 @@
 module.exports = (gulp, cfg, env) ->
+  errorHandler = require '../error-handler'
   sass = require 'gulp-sass'
   connect = require 'gulp-connect'
-  errorHandler = require '../error-handler'
+  minifyCSS = require 'gulp-minify-css'
+  gulpif = require 'gulp-if'
 
   gulp.task "styles", ['clean-styles'], ->
     stream = gulp.src(cfg.paths.stylesIn + '**/*.scss')
@@ -9,5 +11,6 @@ module.exports = (gulp, cfg, env) ->
         errorHandler.error(e)
         stream.end()
       )
+      .pipe(gulpif((env is 'production'), minifyCSS()))
       .pipe(gulp.dest(cfg.paths.stylesOut))
       .pipe(connect.reload())
