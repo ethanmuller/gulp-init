@@ -1,14 +1,20 @@
 @import 'general-variables';
-@import 'headings';
 
 body {
-  background: $dark;
-  color: $light;
+  background: $light url(../img/food.png) repeat fixed;
+  color: $dark;
 
   text-align: center;
-  font: 1.3em/1.7 monospace;
+  font: 1.3em/1.7 Courier, monospace;
 }
 
 a {
-  color: white;
+  color: $light;
+}
+
+h1 {
+  font-size: 4em;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: $light;
 }
