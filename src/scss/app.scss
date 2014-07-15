@@ -1,9 +1,14 @@
+@import 'general-variables';
 @import 'headings';
 
 body {
-  background: #ddd;
-  color: #555;
+  background: $dark;
+  color: $light;
 
   text-align: center;
-  font: 1em/1.7 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 1.3em/1.7 monospace;
+}
+
+a {
+  color: white;
 }
