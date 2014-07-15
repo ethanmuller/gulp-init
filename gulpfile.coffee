@@ -34,4 +34,4 @@ gulp.task "build", (callback) ->
   )
 
 gulp.task "default", (callback) ->
-  runSequence ['watch', 'build']
+  runSequence ['watch', 'server', 'build']
