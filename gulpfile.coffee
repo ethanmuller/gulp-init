@@ -26,12 +26,12 @@ gulp.task "build", (callback) ->
     'clean'
     'assets'
     [
+      'bower-files'
       'scripts'
       'styles'
-      'bower-files'
     ]
     callback
   )
 
 gulp.task "default", (callback) ->
-  runSequence ['watch', 'server', 'build']
+  runSequence ['watch', 'server', 'build'], callback
