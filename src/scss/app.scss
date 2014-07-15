@@ -5,8 +5,4 @@ body {
   color: #555;
   text-align: center;
   font: 1em/1.7 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-  @include sb-media(30em) {
-    background: yellow;
-  }
 }
