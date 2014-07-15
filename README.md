@@ -30,6 +30,21 @@ The rest of the tasks live in `tasks/`, split up by file.
 
 **All your stuff will be processed into `build/`.**
 
+### Errors
+
+By default, plugin errors (such as errors with Sass compilation) will cause
+Gulp to halt. Errors and warnings are fatal. If you want to keep Gulp running,
+use the `--fatal=off` flag. This makes development much smoother.
+
+```
+gulp                  # defaults to fatal=error
+gulp --fatal=error
+gulp --fatal=warning
+gulp --fatal=off      # no errors should kill the build
+```
+
+**Protip:** `alias g='gulp --fatal=off'` for smooth development. :sunglasses:
+
 ## Important Directories/Files
 
 ```
