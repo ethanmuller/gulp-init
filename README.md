@@ -4,8 +4,10 @@ Very basic Gulp starter project. Coffee, SCSS, and a server with live reload.
 
 ## Requirements
 
+- Git, obviously
 - Gulp (`npm install -g gulp`)
-- Probably other stuff that I can't think of.
+- Bower (`npm install -g bower`)
+- PHP, if you're on Windows. If you're on a Mac, you already have it
 
 ## Setup
 
