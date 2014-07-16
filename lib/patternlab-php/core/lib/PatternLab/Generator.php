@@ -77,16 +77,16 @@ class Generator extends Builder {
 		}
 		
 		// iterate over the data files and regenerate the entire site if they've changed
-		$objects = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->sd."/_data/"), \RecursiveIteratorIterator::SELF_FIRST);
+		$objects = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->sd."/data/"), \RecursiveIteratorIterator::SELF_FIRST);
 		
 		// make sure dots are skipped
 		$objects->setFlags(\FilesystemIterator::SKIP_DOTS);
 		
 		foreach($objects as $name => $object) {
 			
-			$fileName = str_replace($this->sd."/_data".DIRECTORY_SEPARATOR,"",$name);
+			$fileName = str_replace($this->sd."/data".DIRECTORY_SEPARATOR,"",$name);
 			if (($fileName[0] != "_") && $object->isFile()) {
-				$this->moveStaticFile("_data/".$fileName,"","_data","data");
+				$this->moveStaticFile("data/".$fileName,"","data","data");
 			}
 			
 		}

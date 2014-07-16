@@ -63,10 +63,15 @@ class Builder {
 		}
 		
 		// set-up the source & public dirs
-		$this->sp = "/../../../source/_patterns".DIRECTORY_SEPARATOR;
+                $this->sp = "/../../../../../src/patterns".DIRECTORY_SEPARATOR;
+		// $this->sp = "/../../../../../../src/patterns".DIRECTORY_SEPARATOR;
+
 		// $this->pp = "/../../../public/patterns".DIRECTORY_SEPARATOR;
 		$this->pp = "/../../../../../build/patterns".DIRECTORY_SEPARATOR;
-		$this->sd = __DIR__."/../../../source";
+
+                // $this->sd = __DIR__."/../../../source";
+                $this->sd = __DIR__."/../../../../../src";
+                
 		// $this->pd = __DIR__."/../../../public";
 		$this->pd = __DIR__."/../../../../../build";
 		
@@ -368,7 +373,7 @@ class Builder {
 	}
 	
 	/**
-	* Gather data from source/_data/_data.json, source/_data/_listitems.json, and pattern-specific json files
+	* Gather data from source/data/_data.json, source/data/_listitems.json, and pattern-specific json files
 	*
 	* Reserved attributes:
 	*    - $this->d["listItems"] : listItems from listitems.json, duplicated into separate arrays for $this->d->listItems->one, $this->d->listItems->two, $this->d->listItems->three... etc.
@@ -384,11 +389,11 @@ class Builder {
 		$this->cacheBuster = ($this->noCacheBuster || ($this->cacheBusterOn == "false")) ? 0 : time();
 		
 		// gather the data from the main source data.json
-		if (file_exists($this->sd."/_data/_data.json")) {
-			$this->d = json_decode(file_get_contents($this->sd."/_data/_data.json"),true);
-			$this->jsonLastErrorMsg("_data/_data.json");
+		if (file_exists($this->sd."/data/_data.json")) {
+			$this->d = json_decode(file_get_contents($this->sd."/data/_data.json"),true);
+			$this->jsonLastErrorMsg("data/_data.json");
 		} else {
-			print "Missing a required file, source/_data/_data.json. Aborting.\n";
+			print "Missing a required file, source/data/_data.json. Aborting.\n";
 			exit;
 		}
 		
@@ -400,7 +405,7 @@ class Builder {
 		}
 		
 		
-		$this->d["listItems"]       = $this->getListItems($this->sd."/_data/_listitems.json");
+		$this->d["listItems"]       = $this->getListItems($this->sd."/data/_listitems.json");
 		$this->d["cacheBuster"]     = $this->cacheBuster;
 		$this->d["link"]            = array();
 		$this->d["patternSpecific"] = array();
