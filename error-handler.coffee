@@ -41,6 +41,8 @@ handleError = (level, error) ->
 module.exports =
   error: (error) ->
     handleError.call(this, 'error', error)
+    this.emit 'end'
 
   warning: (error) ->
     handleError.call(this, 'warning', error)
+    this.emit 'end'

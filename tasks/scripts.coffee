@@ -6,15 +6,20 @@ module.exports = (gulp, cfg, env) ->
   sourcemaps = require "gulp-sourcemaps"
   gulpif = require "gulp-if"
   errorHandler = require '../error-handler'
+  plumber = require 'gulp-plumber'
 
   gulp.task "scripts", ['clean-scripts'], ->
     # Minify and copy all JavaScript (except vendor scripts)
     # with sourcemaps all the way down
     stream = gulp.src(cfg.paths.scriptsIn + '**/*.coffee')
-      .pipe(coffee().on 'error', (e) ->
-        errorHandler.error(e)
-        stream.end()
-      )
+      .pipe(plumber(
+        errorHandler: errorHandler.error
+      ))
+      .pipe(coffee())
+      # .pipe(coffee().on 'error', (e) ->
+        # errorHandler.error(e)
+        # stream.end()
+      # )
       .pipe(concat("all.js"))
       .pipe(gulpif((env is 'production'), uglify()))
       .pipe(gulp.dest(cfg.paths.scriptsOut))
