@@ -11,3 +11,4 @@ module.exports = (gulp, cfg, env) ->
       .pipe plumber errorHandler: errorHandler.error
       .pipe sass()
       .pipe gulp.dest cfg.paths.stylesOut
+      .pipe connect.reload()
