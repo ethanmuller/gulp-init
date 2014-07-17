@@ -8,8 +8,6 @@ module.exports = (gulp, cfg, env) ->
 
   gulp.task "styles", ->
     stream = gulp.src(cfg.paths.stylesIn + '**/*.scss')
-      .pipe(plumber(
-        errorHandler: errorHandler.error
-      ))
+      .pipe plumber errorHandler: errorHandler.error
       .pipe sass()
-      .pipe(gulp.dest(cfg.paths.stylesOut))
+      .pipe gulp.dest cfg.paths.stylesOut

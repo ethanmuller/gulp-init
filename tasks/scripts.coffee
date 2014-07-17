@@ -12,15 +12,9 @@ module.exports = (gulp, cfg, env) ->
     # Minify and copy all JavaScript (except vendor scripts)
     # with sourcemaps all the way down
     stream = gulp.src(cfg.paths.scriptsIn + '**/*.coffee')
-      .pipe(plumber(
-        errorHandler: errorHandler.error
-      ))
-      .pipe(coffee())
-      # .pipe(coffee().on 'error', (e) ->
-        # errorHandler.error(e)
-        # stream.end()
-      # )
-      .pipe(concat("all.js"))
-      .pipe(gulpif((env is 'production'), uglify()))
-      .pipe(gulp.dest(cfg.paths.scriptsOut))
-      .pipe(connect.reload())
+      .pipe plumber(errorHandler: errorHandler.error)
+      .pipe coffee()
+      .pipe concat("all.js")
+      .pipe gulpif((env is 'production'), uglify())
+      .pipe gulp.dest(cfg.paths.scriptsOut)
+      .pipe connect.reload()
