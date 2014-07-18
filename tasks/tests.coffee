@@ -4,6 +4,6 @@ module.exports = (gulp, cfg, env) ->
   errorHandler = require '../error-handler'
   plumber = require 'gulp-plumber'
 
-  gulp.task 'tests', ->
-    stream = gulp.src('tests/test.coffee')
+  gulp.task 'test', ->
+    stream = gulp.src('specs/**/*Spec.coffee')
       .pipe jasmine(verbose: true)

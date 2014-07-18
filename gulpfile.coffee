@@ -30,7 +30,7 @@ gulp.task "build", (callback) ->
       'scripts'
       'styles'
     ]
-    'tests'
+    'test'
     callback
   )
 

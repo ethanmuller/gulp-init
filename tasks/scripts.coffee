@@ -14,7 +14,7 @@ module.exports = (gulp, cfg, env) ->
     stream = gulp.src(cfg.paths.scriptsIn + '**/*.coffee')
       .pipe plumber(errorHandler: errorHandler.error)
       .pipe coffee()
-      .pipe concat("all.js")
+      .pipe concat("app.js")
       .pipe gulpif((env is 'production'), uglify())
       .pipe gulp.dest(cfg.paths.scriptsOut)
       .pipe connect.reload()
