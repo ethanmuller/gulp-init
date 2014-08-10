@@ -3,6 +3,7 @@ module.exports =
     dest: 'build/'
 
     assets: 'src/assets/'
+    patterns: 'src/pattern-lab/**/*'
 
     scriptsIn: 'src/coffee/'
     stylesIn: 'src/scss/'
