@@ -1,20 +1,22 @@
-@import 'general-variables';
+@import 'reset';
 
-body {
-  background: $light url(../img/food.png) repeat fixed;
-  color: $dark;
+.btn {
+ display: inline-block;
 
-  text-align: center;
-  font: 1.3em/1.7 Courier, monospace;
-}
+ background-color: transparent;
+ color: #002833;
+ border: 2px solid #002833;
 
-a {
-  color: $light;
-}
+ padding: 1em 2em;
+ border-radius: 0.6em;
 
-h1 {
-  font-size: 4em;
+ text-transform: uppercase;
 
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: $light;
+ cursor: pointer;
+
+ &:hover {
+   background-color: #002833;
+   color: white;
+   border-color: white;
+ }
 }
