@@ -9,6 +9,7 @@ module.exports = (gulp, cfg, env) ->
   gulp.task "styles", ->
     stream = gulp.src(cfg.paths.stylesIn + '**/*.scss')
       .pipe plumber errorHandler: errorHandler.error
-      .pipe sass()
+      .pipe sass
+        includePaths: require('node-bourbon').includePaths
       .pipe gulp.dest cfg.paths.stylesOut
       .pipe connect.reload()

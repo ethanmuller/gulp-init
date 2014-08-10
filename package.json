@@ -29,7 +29,8 @@
     "yargs": "^1.2.6",
     "gulp-minify-css": "^0.3.6",
     "ncp": "^0.6.0",
-    "gulp-plumber": "^0.6.3"
+    "gulp-plumber": "^0.6.3",
+    "node-bourbon": "^1.2.3"
   },
   "dependencies": {}
 }

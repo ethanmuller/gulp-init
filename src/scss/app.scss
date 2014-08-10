@@ -1,3 +1,4 @@
+@import 'bourbon';
 @import 'reset';
 
 .btn {
@@ -14,9 +15,10 @@
 
  cursor: pointer;
 
+ @include transition(all 0.1s ease-out);
+
  &:hover {
    background-color: #002833;
    color: white;
-   border-color: white;
  }
 }
