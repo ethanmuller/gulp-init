@@ -29,6 +29,7 @@ gulp.task "build", (callback) ->
       'bower-files'
       'scripts'
       'styles'
+      'pattern-lab'
     ]
     callback
   )
