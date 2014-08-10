@@ -4,7 +4,6 @@ module.exports = (gulp, cfg, env) ->
     gulp.watch(cfg.paths.assets + '**/*', ['build'])
     gulp.watch(cfg.paths.scriptsIn + '**/*.coffee', ['scripts'])
     gulp.watch(cfg.paths.stylesIn + '**/*.scss', ['styles'])
-    gulp.watch(['src/patterns/**/*', 'src/data/**/*.json'], ['pattern-lab'])
     gulp.watch('tests/**/*', ['tests'])
 
     # This doesn't seem to be picking up on bower installs.
