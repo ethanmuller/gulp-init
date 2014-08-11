@@ -1,3 +1,5 @@
+**HEADS UP:** This project is dead. Its spirit lives on in the form of a Yeoman generator: [generator-gulp-mg](https://github.com/ethanmuller/generator-gulp-mg)
+
 #gulp-init
 
 Very basic Gulp starter project. Coffee, SCSS, and a server with live reload.
