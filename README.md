@@ -1,4 +1,4 @@
-**HEADS UP:** This project is dead. Its spirit lives on in the form of a Yeoman generator: [generator-gulp-mg](https://github.com/ethanmuller/generator-gulp-mg)
+**HEADS UP:** This project is dead. Its spirit lives on in the form of a Yeoman generator: [generator-mg-redux](https://github.com/ethanmuller/generator-mg-redux)
 
 #gulp-init
 
